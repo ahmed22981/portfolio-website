@@ -33,7 +33,7 @@ export default function AboutMe() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Hi, I'm Ahmed - a passionate Full Stack Developer with a knack for
+            Hi, I'm Ahmed - A passionate Full Stack Developer with a knack for
             creating dynamic, user-friendly applications. Here's a look at the
             technologies I work with.
           </motion.p>

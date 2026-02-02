@@ -13,27 +13,33 @@ import NavbarRes from "@/components/navbar";
 // });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.sparshkamat.me'),
+  // 1. UPDATED: Your actual Vercel URL
+  metadataBase: new URL('https://ahmed-omran-portfolio.vercel.app'),
+  
   title: "Ahmed Omran - Full Stack Developer",
   description: "The portfolio of Ahmed Omran, a passionate Full Stack Developer creating dynamic and user-friendly web applications.",
   keywords: ["Ahmed Omran", "Full Stack Developer", "Angular", "Next.js", "Node.Js", "Express", "React", "TypeScript", "Portfolio", "Full Stack", "Web Development"],
-  authors: [{ name: "Ahmed Omran", url: "https://www.sparshkamat.me" }],
+  
+  authors: [{ name: "Ahmed Omran", url: "https://ahmed-omran-portfolio.vercel.app" }],
   creator: "Ahmed Omran",
+
+
+  icons: {
+    icon: '/favicon.jpg',
+  },
 
   alternates: {
     canonical: '/',
   },
 
-  
-
   openGraph: {
     type: 'website',
-    url: 'https://www.sparshkamat.me',
+    url: 'https://ahmed-omran-portfolio.vercel.app',
     title: 'Ahmed Omran - Full Stack Developer',
     description: 'The portfolio of Ahmed Omran...',
     images: [
       {
-        url: 'https://www.sparshkamat.me/og-image.png', 
+        url: '/og-image.png', 
         width: 1200,
         height: 630,
         alt: 'Ahmed Omran Portfolio',
@@ -45,7 +51,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Ahmed Omran - Full Stack Developer',
     description: 'The portfolio of Ahmed Omran...',
-    images: ['https://www.sparshkamat.me/og-image.png'],
+    images: ['/og-image.png'],
   },
 };
 

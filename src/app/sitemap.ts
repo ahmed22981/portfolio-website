@@ -1,21 +1,21 @@
-// src/app/sitemap.ts
-import { MetadataRoute } from 'next'
+import {MetadataRoute} from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://www.sparshkamat.me'
+  // UPDATED: Your new Vercel domain
+  const baseUrl = "https://ahmed-omran-portfolio.vercel.app";
 
   return [
     {
       url: baseUrl,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
+      changeFrequency: "monthly",
       priority: 1,
     },
     {
       url: `${baseUrl}/projects`,
       lastModified: new Date(),
-      changeFrequency: 'weekly',
+      changeFrequency: "weekly",
       priority: 0.8,
     },
-  ]
+  ];
 }
