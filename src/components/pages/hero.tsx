@@ -57,7 +57,7 @@ export default function Hero() {
               />
             </Link>
             <Link
-              href="mailto:ahmedhatemomranh@gmail.com"
+              href="mailto:ahmedhatemomran@gmail.com"
               target="_blank"
               className="social-link"
               aria-label="Send me an email"
