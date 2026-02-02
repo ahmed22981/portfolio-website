@@ -233,14 +233,14 @@ export default function Contact() {
       <div className="text-center max-w-sm md:max-w-lg  text-muted-foreground">
         <p className="text-sm">
           You can also reach me directly at{" "}
-          <a
-            href="mailto:kamatsparsh@gmail.com"
-            target="_blank"
-            aria-label="Email Sparsh Kamat"
-            className="text-primary underline underline-offset-4 hover:text-primary/90"
+          <span
+            // href="mailto:kamatsparsh@gmail.com"
+            // target="_blank"
+            // aria-label="Email Sparsh Kamat"
+            className="text-primary underline-offset-4 hover:text-primary/90"
           >
-            kamatsparsh@gmail.com
-          </a>
+            +201028844211
+          </span>
         </p>
       </div>
     </section>

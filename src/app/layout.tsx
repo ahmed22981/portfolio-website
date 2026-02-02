@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Roboto_Serif } from "next/font/google";
+// import { Roboto_Serif } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
@@ -8,17 +8,17 @@ import { ThemeProvider } from "@/components/theme-provider";
 import CustomCursor from "@/components/custom-cursor";
 import NavbarRes from "@/components/navbar";
 
-const robotoSerif = Roboto_Serif({
-  subsets: ["latin"],
-});
+// const robotoSerif = Roboto_Serif({
+//   subsets: ["latin"],
+// });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.sparshkamat.me'),
-  title: "Sparsh Kamat - Full Stack Developer",
-  description: "The portfolio of Sparsh Kamat, a passionate Full Stack Developer creating dynamic and user-friendly web applications.",
-  keywords: ["Sparsh Kamat", "Full Stack Developer", "Next.js", "React", "TypeScript", "Portfolio", "Full Stack", "Web Development"],
-  authors: [{ name: "Sparsh Kamat", url: "https://www.sparshkamat.me" }],
-  creator: "Sparsh Kamat",
+  title: "Ahmed Omran - Full Stack Developer",
+  description: "The portfolio of Ahmed Omran, a passionate Full Stack Developer creating dynamic and user-friendly web applications.",
+  keywords: ["Ahmed Omran", "Full Stack Developer", "Angular", "Next.js", "Node.Js", "Express", "React", "TypeScript", "Portfolio", "Full Stack", "Web Development"],
+  authors: [{ name: "Ahmed Omran", url: "https://www.sparshkamat.me" }],
+  creator: "Ahmed Omran",
 
   alternates: {
     canonical: '/',
@@ -29,22 +29,22 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: 'https://www.sparshkamat.me',
-    title: 'Sparsh Kamat - Full Stack Developer',
-    description: 'The portfolio of Sparsh Kamat...',
+    title: 'Ahmed Omran - Full Stack Developer',
+    description: 'The portfolio of Ahmed Omran...',
     images: [
       {
         url: 'https://www.sparshkamat.me/og-image.png', 
         width: 1200,
         height: 630,
-        alt: 'Sparsh Kamat Portfolio',
+        alt: 'Ahmed Omran Portfolio',
       },
     ],
   },
   
   twitter: {
     card: 'summary_large_image',
-    title: 'Sparsh Kamat - Full Stack Developer',
-    description: 'The portfolio of Sparsh Kamat...',
+    title: 'Ahmed Omran - Full Stack Developer',
+    description: 'The portfolio of Ahmed Omran...',
     images: ['https://www.sparshkamat.me/og-image.png'],
   },
 };
@@ -55,7 +55,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en"  className={robotoSerif.className} suppressHydrationWarning >
+    <html lang="en"  className="" suppressHydrationWarning >
       <body className="flex flex-col min-h-screen flex-grow">
         <ThemeProvider
           attribute="class"

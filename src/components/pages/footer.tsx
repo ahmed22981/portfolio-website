@@ -8,12 +8,12 @@ export default function Footer() {
   return (
     <footer className="flex flex-col gap-2  md:flex-row py-2 w-full shrink-0 items-center px-4 md:px-6 border-t">
         <p className="text-xs text-muted-foreground order-last md:order-first">
-           Developed and designed by Sparsh Kamat.
+           Developed and designed by Ahmed Omran.
         </p>
         <nav className="md:ml-auto flex gap-4 md:gap-6">
           
           <Link 
-            href="https://github.com/sparsh-kamat"
+            href="https://github.com/ahmed22981"
             className="flex items-center gap-1 text-xs text-muted-foreground hover:text-primary transition-colors"
             target="_blank"
             rel="noopener noreferrer"
@@ -28,7 +28,7 @@ export default function Footer() {
               />
           </Link>
             <Link 
-                href="https://linkedin.com/in/sparshkamat"
+                href="https://www.linkedin.com/in/ahmed-omran-310a91317/"
                 className="flex items-center gap-1 text-xs text-muted-foreground hover:text-primary transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
