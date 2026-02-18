@@ -8,6 +8,9 @@ import { ThemeProvider } from "@/components/theme-provider";
 import CustomCursor from "@/components/custom-cursor";
 import NavbarRes from "@/components/navbar";
 
+// 1. Import the tracker component
+import AnalyticsTracker from "@/components/common/AnalyticsTracker";
+
 // const robotoSerif = Roboto_Serif({
 //   subsets: ["latin"],
 // });
@@ -69,6 +72,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          {/* 2. Add the tracker here so it runs silently in the background */}
+          <AnalyticsTracker />
+          
           <div className="flex flex-col min-h-screen flex-grow">
             <CustomCursor />
             <NavbarRes />

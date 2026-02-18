@@ -2,6 +2,7 @@
 
 import {z} from "zod";
 import {Resend} from "resend";
+import {headers} from "next/headers";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -51,4 +52,29 @@ export async function sendEmail(data: unknown) {
     success: true,
     message: "Email sent successfully!",
   };
+}
+
+export async function trackVisit() {
+  const headerStore = await headers();
+  const userAgent = headerStore.get("user-agent") || "Unknown Device";
+
+  const ip = headerStore.get("x-forwarded-for") || "Unknown IP";
+  const referer = headerStore.get("referer") || "Direct Visit";
+
+  const webhookUrl = process.env.DISCORD_WEBHOOK_URL;
+
+  if (!webhookUrl) return;
+
+  try {
+    await fetch(webhookUrl, {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({
+        content: `🚨 **New Portfolio Visitor!**\n**IP:** ${ip}\n**Device:** ${userAgent}\n**Source:** ${referer}`,
+        username: "Portfolio Bot",
+      }),
+    });
+  } catch (error) {
+    console.error("Tracking failed", error);
+  }
 }
