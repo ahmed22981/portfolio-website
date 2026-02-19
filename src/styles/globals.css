@@ -140,7 +140,6 @@
   }
 }
 
-
 .hide-scrollbar-track::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.281);
   border-radius: 9999px;
@@ -154,7 +153,6 @@
 .hide-scrollbar-track {
   scrollbar-color: rgba(228, 219, 219, 0.281) transparent;
 }
-
 
 /* === START: CURSOR STYLES === */
 
@@ -214,4 +212,17 @@
       350% 50%,
       350% 50%;
   }
+}
+@keyframes swing {
+  0% {
+    transform: rotate(12deg);
+  }
+  100% {
+    transform: rotate(-12deg);
+  }
+}
+
+.animate-swing {
+  animation: swing 3s infinite ease-in-out alternate;
+  transform-origin: top center;
 }
