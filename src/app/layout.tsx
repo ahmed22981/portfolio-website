@@ -10,7 +10,7 @@ import NavbarRes from "@/components/navbar";
 
 // 1. Import the tracker component
 import AnalyticsTracker from "@/components/common/AnalyticsTracker";
-import RamadanDecor from '@/components/common/RamadanDecor';
+// import RamadanDecor from '@/components/common/RamadanDecor';
 
 // const robotoSerif = Roboto_Serif({
 //   subsets: ["latin"],
@@ -75,7 +75,7 @@ export default function RootLayout({
         >
           <AnalyticsTracker />
           
-          <RamadanDecor />
+          {/* <RamadanDecor /> */}
           
           <div className="flex flex-col min-h-screen flex-grow">
             <CustomCursor />
