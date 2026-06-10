@@ -34,6 +34,25 @@ export const projects: Project[] = [
   },
   {
     id: 2,
+    title: "GymDiary — Comprehensive Fitness Tracker",
+    description:
+      "A full-stack Progressive Web App (PWA) for advanced fitness and nutrition tracking. Features custom workout logging, interactive muscle heatmaps, progress analytics, and an automated macro calculator. Built with a Django REST backend and a React frontend, utilizing Google OAuth for authentication and Cloudinary for optimized media storage.",
+    technologies: [
+      "React",
+      "TypeScript",
+      "Django",
+      "Django REST Framework",
+      "PostgreSQL",
+      "Tailwind CSS",
+      "PWA",
+      "Cloudinary",
+    ],
+    image: "/gym-tracker.png", 
+    live: "https://gym-tracker-app-eight.vercel.app/", 
+    github: "https://github.com/ahmed22981/gym_tracker_app", 
+  },
+  {
+    id: 3,
     title: "InstaLeh — Social media App",
     description:
       "A feature-rich social media app with real-time chat, notifications, and post interactions. Uses Socket.io for live updates, Redux Toolkit for efficient state management, and ImageKit for optimized media delivery.",
@@ -49,12 +68,12 @@ export const projects: Project[] = [
       "Tailwind CSS",
     ],
     image: "/instaleh.png",
-    live: "https://instaleh.vercel.app/",
+    live: "/",
     github: "https://github.com/ahmed22981/social_media",
   },
   //add 5 more to test carousel
   {
-    id: 3,
+    id: 4,
     title: "Easy Cook Meals",
     description:
       "A dynamic recipe manager built with Angular and TypeScript. Features a component-based architecture, reactive forms for meal planning, and comprehensive client-side validation.",
@@ -64,7 +83,7 @@ export const projects: Project[] = [
     github: "https://github.com/ahmed22981/Easy-Cook-Meals",
   },
   {
-    id: 4,
+    id: 5,
     title: "AgriLink — Agricultural Platform",
     description:
       "A full-stack commerce platform for agriculture featuring interactive geospatial mapping with Leaflet. Implements a secure REST API with JWT authentication and optimized media management via Cloudinary.",
@@ -82,26 +101,6 @@ export const projects: Project[] = [
     live: "/", // You can link to the portfolio itself
     github: "https://github.com/GP-AgriLink/AgriLink-MVP",
   },
-  // {
-  //     id: 5,
-  //     title: "Subscription Trackr",
-  //     description: "A full-stack subscription management app built with Next.js and Prisma. Features a responsive dashboard, multi-currency conversion, and automated renewal alerts to help users track their spending.",
-  //     technologies: ["Next.js", "Supabase", "Tailwind CSS", "Prisma", "Vercel", "OAuth"],
-  //     image: "/subscriptionTrackr.png",
-  //     live: "https://subsciptiontrackr.vercel.app",
-  //     github: "https://github.com/sparsh-kamat/SubscriptionTrackr",
-  // },
-  // {
-  //     id: 6,
-  //     title: "Portfolio Website",
-  //     description: "A modern, SEO-optimized portfolio showcasing my skills and projects. Built from the ground up with Next.js, Tailwind CSS, and Framer Motion to create a fast and engaging user experience.",
-  //     technologies: ["Next.js", "React", "TypeScript", "Shadcn UI", "Tailwind CSS"],
-  //     image: "/portfoliomockup.png",
-  //     live: "#", // You can link to the portfolio itself
-  //     github: "https://github.com/sparsh-kamat/portfolio-v2",
-  // },
-
-  // ... more projects
 ];
 
 export const historyData = [

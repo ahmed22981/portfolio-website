@@ -1,10 +1,12 @@
 import GithubIcon from "../../../public/github.svg";
 import LinkedinIcon from "../../../public/linkedin.svg";
-import { Mail } from "lucide-react";
+import { Mail, Download } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import profilePhoto from "../../../public/headshot.jpg";
 import { AuroraBackground } from "../ui/aurora-background";
+import { Button } from "@/components/ui/button";
+
 export default function Hero() {
   return (
     <section
@@ -66,12 +68,27 @@ export default function Hero() {
             </Link>
           </div>
           <h1 className="text-7xl md:pt-4 lg:pt-8 font-serif text-center md:text-left  text-primary">
-            <span>Ahmed</span> {/* Add a space for the inline view */}
+            <span>Ahmed</span> 
             <span className="block lg:inline text-primary">Omran</span>
           </h1>
-          <p className="font-serif text-xl pt-4 lg:pt-9 text-muted-foreground">
+          <p className="font-serif text-xl pt-4 lg:pt-9 text-muted-foreground text-center md:text-left">
             Full Stack Engineer | Tech Enthusiast
           </p>
+
+          {/* Download CV Button Container */}
+          <div className="flex justify-center md:justify-start mt-6 lg:mt-8">
+            <a 
+              href="/resume.pdf" 
+              download="Ahmed_Omran_CV.pdf"
+              className="inline-block"
+            >
+              <Button variant="outline" className="flex items-center gap-2 cursor-pointer">
+                <span>Download CV</span>
+                <Download className="w-4 h-4" />
+              </Button>
+            </a>
+          </div>
+
         </div>
       </div>
     </section>
