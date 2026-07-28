@@ -155,7 +155,7 @@ export default function Hero() {
             </Link>
 
             <Link
-              href="https://www.linkedin.com/in/ahmed-omran-310a91317/"
+              href="https://www.linkedin.com/in/ahmed-hatem-omran/"
               target="_blank"
               aria-label="LinkedIn"
               className="social-link transition-all duration-300 hover:-translate-y-2 hover:scale-110"

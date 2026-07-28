@@ -81,7 +81,7 @@ export default function Footer() {
           </Link>
 
           <Link
-            href="https://www.linkedin.com/in/ahmed-omran-310a91317/"
+            href="https://www.linkedin.com/in/ahmed-hatem-omran/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
