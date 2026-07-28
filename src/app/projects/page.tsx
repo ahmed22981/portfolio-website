@@ -1,11 +1,10 @@
-import { projects } from "@/lib/data";
-import { Button } from "@/components/ui/button";
+import {projects} from "@/lib/data";
+import {Button} from "@/components/ui/button";
 import Link from "next/link";
-import {ArrowLeft } from "lucide-react";
+import {ArrowLeft} from "lucide-react";
 import ProjectList from "./projectlist";
 
 export default function Projects() {
-
   return (
     <section className="flex flex-col min-h-dvh py-20 items-center justify-center bg-muted/10">
       {/* Back Navigation */}
@@ -31,7 +30,7 @@ export default function Projects() {
       </div>
 
       <div className="flex items-center w-full max-w-md md:max-w-5xl mx-auto px-10 xl:px-0 mb-8">
-       <ProjectList projects={projects} />
+        <ProjectList projects={projects} />
       </div>
     </section>
   );

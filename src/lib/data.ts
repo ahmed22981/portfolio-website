@@ -47,9 +47,9 @@ export const projects: Project[] = [
       "PWA",
       "Cloudinary",
     ],
-    image: "/gym-tracker.png", 
-    live: "https://gym-tracker-app-eight.vercel.app/", 
-    github: "https://github.com/ahmed22981/gym_tracker_app", 
+    image: "/gym-tracker.png",
+    live: "https://gym-tracker-app-eight.vercel.app/",
+    github: "https://github.com/ahmed22981/gym_tracker_app",
   },
   {
     id: 3,
@@ -146,7 +146,7 @@ export const frontendTech = [
   "Angular",
   "Bootstrap",
   "Tailwind CSS",
-  "Matiral UI",
+  "Mateiral UI",
 ];
 
 export const backendTech = [
@@ -157,15 +157,16 @@ export const backendTech = [
   "MongoDB",
   "PostgreSQL",
   "SQLite",
+  "REST APIs",
+  "GraphQL",
 ];
 
 export const toolsAndDevops = [
+  "Git",
   "GitHub",
-  "Vercel",
   "Docker",
+  "Vercel",
   "Unit Testing",
-  "RESTfull APIs",
-  "GraphQl",
 ];
 
 export const programmingLanguages = [

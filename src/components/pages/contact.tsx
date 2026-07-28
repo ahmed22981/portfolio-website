@@ -1,12 +1,19 @@
 "use client";
 
-import React, { useState } from "react";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
+import React, {useState, Fragment} from "react";
+import {useForm} from "react-hook-form";
+import {zodResolver} from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
-import { Send, CheckCircle, AlertCircle, RotateCcw } from "lucide-react";
+import {Button} from "@/components/ui/button";
+import {Separator} from "@/components/ui/separator";
+import {
+  Send,
+  CheckCircle,
+  AlertCircle,
+  RotateCcw,
+  Phone,
+  MessageCircle,
+} from "lucide-react";
 import {
   Form,
   FormControl,
@@ -15,10 +22,10 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Alert, AlertDescription } from "@/components/ui/alert";
-import { sendEmail } from "@/lib/actions";
+import {Input} from "@/components/ui/input";
+import {Textarea} from "@/components/ui/textarea";
+import {Alert, AlertDescription} from "@/components/ui/alert";
+import {sendEmail} from "@/lib/actions";
 // Form validation schema
 const contactFormSchema = z.object({
   name: z
@@ -44,7 +51,7 @@ type ContactFormData = z.infer<typeof contactFormSchema>;
 export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"success" | "error" | null>(
-    null
+    null,
   );
 
   const form = useForm<ContactFormData>({
@@ -83,15 +90,19 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="flex flex-col  pt-20 pb-10  lg:px-10 items-center justify-center  ">
-      <div className="grid grid-cols-1 lg:gap-10 lg:grid-cols-2  w-full max-w-sm  md:max-w-2xl lg:max-w-5xl   ">
+    <section
+      id="contact"
+      className="flex flex-col  pt-20 pb-10  lg:px-10 items-center justify-center  "
+    >
+      <div className="grid grid-cols-1 lg:gap-10 lg:grid-cols-2  w-full max-w-sm  md:max-w-2xl lg:max-w-5xl ">
         <div className=" text-center  mb-1">
           <h2 className="text-5xl font-serif tracking-tight leading-tight mb-3">
-            Contact Me :)
+            Contact Me
           </h2>
           <p className="text-lg text-muted-foreground mb-8">
-            I'm always open to discussing new projects, creative ideas, or
-            opportunities to be part of your vision. Feel free to reach out!
+            Have an idea, a freelance opportunity, or a full-time role? I'd love
+            to hear from you. Feel free to reach out and I'll get back to you as
+            soon as possible.
           </p>
         </div>
 
@@ -134,7 +145,7 @@ export default function Contact() {
                   <FormField
                     control={form.control}
                     name="name"
-                    render={({ field }) => (
+                    render={({field}) => (
                       <FormItem>
                         <FormControl>
                           <Input
@@ -151,7 +162,7 @@ export default function Contact() {
                   <FormField
                     control={form.control}
                     name="email"
-                    render={({ field }) => (
+                    render={({field}) => (
                       <FormItem>
                         <FormControl>
                           <Input
@@ -171,7 +182,7 @@ export default function Contact() {
                 <FormField
                   control={form.control}
                   name="subject"
-                  render={({ field }) => (
+                  render={({field}) => (
                     <FormItem>
                       <FormControl>
                         <Input
@@ -189,12 +200,12 @@ export default function Contact() {
                 <FormField
                   control={form.control}
                   name="message"
-                  render={({ field }) => (
+                  render={({field}) => (
                     <FormItem>
                       <FormControl>
                         <Textarea
-                          placeholder="Tell me about your project or idea..."
-                          className="min-h-[100px] resize-none"
+                          placeholder="Tell me about your project, idea or opportunity..."
+                          className="min-h-[140px] resize-none"
                           {...field}
                           disabled={isSubmitting}
                         />
@@ -207,7 +218,7 @@ export default function Contact() {
                 {/* Submit Button */}
                 <Button
                   type="submit"
-                  className="w-full"
+                  className="w-full transition-all duration-300 hover:scale-[1.02]"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? (
@@ -230,18 +241,30 @@ export default function Contact() {
       <Separator className="mt-10 mb-8 max-w-xs md:max-w-xl lg:max-w-2xl" />
 
       {/* Additional Contact Info */}
-      <div className="text-center max-w-sm md:max-w-lg  text-muted-foreground">
+      <div className="text-center max-w-md text-muted-foreground space-y-3">
         <p className="text-sm">
-          You can also reach me directly at{" "}
-          <span
-            // href="mailto:kamatsparsh@gmail.com"
-            // target="_blank"
-            // aria-label="Email Sparsh Kamat"
-            className="text-primary underline-offset-4 hover:text-primary/90"
-          >
-            +201028844211
-          </span>
+          Prefer a quick conversation? Reach me directly.
         </p>
+
+        <div className="flex justify-center gap-6">
+          <a
+            href="tel:+201028844211"
+            className="flex items-center gap-2 hover:text-primary transition-colors"
+          >
+            <Phone className="w-4 h-4" />
+            <span>Call</span>
+          </a>
+
+          <a
+            href="https://wa.me/201028844211"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 hover:text-green-500 transition-colors"
+          >
+            <MessageCircle className="w-4 h-4" />
+            <span>WhatsApp</span>
+          </a>
+        </div>
       </div>
     </section>
   );

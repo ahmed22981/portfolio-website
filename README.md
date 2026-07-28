@@ -79,6 +79,3 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 This project is deployed on [Vercel](https://vercel.com/), the platform from the creators of Next.js, and includes Vercel Analytics and Speed Insights for monitoring.
 
----
-
-Developed and designed by Sparsh Kamat.

@@ -34,6 +34,7 @@
     "embla-carousel-fade": "^8.6.0",
     "embla-carousel-react": "^8.6.0",
     "embla-carousel-wheel-gestures": "^8.0.2",
+    "framer-motion": "^12.42.2",
     "lucide-react": "^0.514.0",
     "motion": "^12.18.1",
     "next": "15.3.8",
